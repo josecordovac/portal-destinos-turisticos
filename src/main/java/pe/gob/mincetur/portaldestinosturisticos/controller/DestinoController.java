@@ -20,13 +20,12 @@ public class DestinoController {
 	@GetMapping("list")
 	public String destinos(Model model) {
 		model.addAttribute("destinos", this.destinoRepository.findAll());
-		return "index";
+		return "destinos";
 	}
 
 	@RequestMapping(value = "search", method = RequestMethod.GET)
 	public String search(@RequestParam (value = "name", required = false) String name, Model model) {
-		model.addAttribute("searchHome", true);
 		model.addAttribute("search", destinoRepository.findByName(name));
-        return "index";
+        return "busqueda";
 	}
 }

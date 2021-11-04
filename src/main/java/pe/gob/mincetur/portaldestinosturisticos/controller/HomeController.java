@@ -9,13 +9,11 @@ public class HomeController {
     
     @GetMapping("/")
     String index(Model model) {
-        model.addAttribute("indexHome", true);
         return "index";
     }
 
     @GetMapping("/search")
 	public String search(Model model) {
-		model.addAttribute("searchHome", true);
-		return "index";
+		return "busqueda";
 	}
 }
