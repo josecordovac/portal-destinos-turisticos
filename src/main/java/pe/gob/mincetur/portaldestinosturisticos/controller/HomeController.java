@@ -16,4 +16,9 @@ public class HomeController {
 	public String search(Model model) {
 		return "busqueda";
 	}
+
+    @GetMapping("/reportes")
+	public String reportes(Model model) {
+		return "reportes";
+	}
 }
